@@ -5,7 +5,7 @@ import Link from "next/link";
 const Container = styled.div`
     flex: 1;
 
-    &:first-child {
+    &:not(:first-child) {
         margin-top: 24px;
     }
 `;
@@ -13,7 +13,7 @@ const Container = styled.div`
 const Header = styled.h4`
     font-weight: 600;
     font-size: 16px;
-    margin: 8px 32px 8px 0;
+    margin: 0 32px 8px 0;
     text-transform: uppercase;
 `;
 
@@ -48,8 +48,8 @@ const SidebarCard = ({ title, links }) => {
             <Header>{title}</Header>
             <Border />
             <List>
-                {links.map(link => (
-                    <ListItem>
+                {links.map((link, i) => (
+                    <ListItem key={`${title}-${i}`}>
                         <Link href={link.href}>
                             <a>{link.label}</a>
                         </Link>

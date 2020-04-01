@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledSidebar = styled.aside`
-    flex: 1 0 20%;
+    flex: 1 0 15%;
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
+    display: inline-block;
+    box-sizing: border-box;
+    overflow: auto;
 `;
 
 const Sidebar = ({ children }) => {

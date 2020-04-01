@@ -2,10 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import MainLayout from "components/MainLayout";
 import Searchbox from "components/Searchbox";
-import Content from "components/Content";
+import Content, {
+    PageTitle,
+    PageDescription,
+    Code,
+    CodeBlock,
+    TopicTitle,
+    TopicBody,
+    NotificationTip,
+    NotificationNote
+} from "components/Content";
 import Sidebar from "components/Sidebar";
 import Wrapper from "components/Wrapper";
 import SidebarCard from "components/SidebarCard";
+import AdSkyscraper from "components/AdSkyscraper";
+import Divider from "components/Divider";
 
 const Container = styled.div`
     display: flex;
@@ -29,7 +40,7 @@ export default () => {
                 <Wrapper>
                     <Sidebar>
                         <SidebarCard
-                            title="HTML Basic"
+                            title="HTML Basics"
                             links={[
                                 {
                                     href: "/",
@@ -146,9 +157,59 @@ export default () => {
                         />
                     </Sidebar>
                     <Content>
-                        <h2>Learn HTML</h2>
+                        <PageTitle>HTML Tutorial</PageTitle>
+                        <PageDescription>
+                            <p>
+                                HTML is the standard markup language for Web
+                                pages.
+                            </p>
+                        </PageDescription>
+                        <Divider />
+
+                        <TopicTitle>Headers and Paragraphs</TopicTitle>
+                        <TopicBody>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Cras vel est vitae arcu varius
+                                pulvinar. Nulla facilisi. Pellentesque malesuada
+                                libero ligula, consequat tristique velit
+                                scelerisque sit amet. Cras nec hendrerit odio.
+                                Nunc gravida in nulla ac accumsan. Donec ac nisi
+                                suscipit, egestas quam non, gravida tortor.
+                                Aenean sed pharetra magna, vitae egestas purus.
+                                Integer urna neque, scelerisque quis sagittis
+                                nec, tempor vitae dui. Proin et efficitur eros.
+                                Pellentesque habitant morbi tristique senectus
+                                et netus et malesuada fames ac turpis egestas.
+                            </p>
+                            <p>
+                                Now, this is a sample{" "}
+                                <Code>{`<code></code>`}</Code>
+                            </p>
+                            <CodeBlock language="markup">
+                                {`<html>\n\t<head>\n\t\t<title>Sample Title</title>\n\t</head>\n\t<body>\n\t\t<h1>Hello World!</h1>\n\t</body>\n</html>`}
+                            </CodeBlock>
+                            <NotificationTip>
+                                We suggest you to use Notepad (on Windows),
+                                TextEdit (on Mac) or some other simple text
+                                editor to do this; don't use Word or WordPad!
+                                Once you understand the basic principles, you
+                                may switch to more advanced tools such as Adobe
+                                Dreamweaver.
+                            </NotificationTip>
+                            <NotificationNote>
+                                We suggest you to use Notepad (on Windows),
+                                TextEdit (on Mac) or some other simple text
+                                editor to do this; don't use Word or WordPad!
+                                Once you understand the basic principles, you
+                                may switch to more advanced tools such as Adobe
+                                Dreamweaver.
+                            </NotificationNote>
+                        </TopicBody>
                     </Content>
-                    <Sidebar></Sidebar>
+                    <Sidebar>
+                        <AdSkyscraper />
+                    </Sidebar>
                 </Wrapper>
             </Container>
         </MainLayout>

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Footer from "components/Footer";
 import Navbar from "components/Navbar";
+import AdBanner from "components/AdBanner";
 
 const StyledLayout = styled.main`
     display: flex;
@@ -19,6 +20,8 @@ const MainLayout = ({ children }) => {
         <StyledLayout>
             <Navbar />
             <Content>{children}</Content>
+            <AdBanner />
+
             <Footer />
         </StyledLayout>
     );

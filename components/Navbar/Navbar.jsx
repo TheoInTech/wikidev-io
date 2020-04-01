@@ -74,7 +74,7 @@ const SignupLink = styled(ButtonLink)`
 `;
 
 const LoginLink = styled(ButtonLink)`
-    background: #00000033;
+    background: #00000099;
     color: white;
 `;
 

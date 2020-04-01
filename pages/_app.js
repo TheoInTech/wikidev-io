@@ -53,9 +53,14 @@ const GlobalStyle = createGlobalStyle`
 const theme = {
     colors: {
         offwhite: "#FAFAFA",
-        primary: "#ff8d00",
-        secondary: "#ff8d0033"
-    }
+        primary: "#4CAF50",
+        secondary: "#ff8d0033",
+        blue: "#428BCA",
+        gray: "#6b6b6b",
+        fadeGreen: "#D5EFC2",
+        fadeBlue: "#D5E9F6"
+    },
+    border: "1px solid #dfdfdf"
 };
 
 export default class MyApp extends App {

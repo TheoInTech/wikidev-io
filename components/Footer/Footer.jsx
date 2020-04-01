@@ -28,7 +28,7 @@ const Appeal = styled.section`
 
 const FooterInner = styled.section`
     flex: 1;
-    background: #322610;
+    background: #0c240a;
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;

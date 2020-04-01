@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import MainLayout from "components/MainLayout";
 import CategoryCard from "components/CategoryCard";
+import FlexContent from "components/FlexContent";
 import Searchbox from "components/Searchbox";
-import Content from "components/Content";
 import Sidebar from "components/Sidebar";
 import Wrapper from "components/Wrapper";
 import SidebarCard from "components/SidebarCard";
+import AdSkyscraper from "components/AdSkyscraper";
 
 const Container = styled.div`
     display: flex;
@@ -112,7 +113,7 @@ export default () => {
                             ]}
                         />
                     </Sidebar>
-                    <Content>
+                    <FlexContent>
                         <CategoryCard
                             icon="search"
                             title="Learn HTML"
@@ -158,8 +159,10 @@ export default () => {
                             title="Learn HTML"
                             link="/"
                         />
-                    </Content>
-                    <Sidebar></Sidebar>
+                    </FlexContent>
+                    <Sidebar>
+                        <AdSkyscraper />
+                    </Sidebar>
                 </Wrapper>
             </Container>
         </MainLayout>
