@@ -1,0 +1,26 @@
+{
+    "name": "wikidev-io",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "next",
+        "build": "next build",
+        "start": "next start",
+        "build-docker": "docker build -t theoroque95/wikidev-io .",
+        "build-docker-multistage": "docker build -t theoroque95/wikidev-io -f ./Dockerfile.multistage .",
+        "run-docker": "docker run --rm -it -p 3000:3000 theoroque95/wikidev-io"
+    },
+    "dependencies": {
+        "babel-plugin-module-resolver": "^4.0.0",
+        "dotenv": "^8.2.0",
+        "next": "latest",
+        "next-fonts": "^1.0.3",
+        "react": "^16.7.0",
+        "react-dom": "^16.7.0",
+        "react-inlinesvg": "^1.2.0",
+        "styled-components": "^5.0.1"
+    },
+    "devDependencies": {
+        "isomorphic-unfetch": "^3.0.0"
+    },
+    "license": "ISC"
+}
