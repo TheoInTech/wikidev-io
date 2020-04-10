@@ -42,7 +42,17 @@ const ListItem = styled.li`
     }
 `;
 
-const SidebarCard = ({ title, links }) => {
+interface LinkInterface {
+    href: string;
+    label: string;
+}
+
+interface Props {
+    title: string;
+    links: LinkInterface[];
+}
+
+const SidebarCard: React.FC<Props> = ({ title, links }) => {
     return (
         <Container>
             <Header>{title}</Header>

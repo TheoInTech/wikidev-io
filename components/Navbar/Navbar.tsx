@@ -74,11 +74,11 @@ const SignupLink = styled(ButtonLink)`
 `;
 
 const LoginLink = styled(ButtonLink)`
-    background: #00000099;
+    background: ${({ theme }) => theme.colors.gray};
     color: white;
 `;
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
     return (
         <StyledNavbar>
             <Logo>

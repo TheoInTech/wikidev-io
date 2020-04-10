@@ -7,7 +7,12 @@ const StyledPageDescription = styled.div`
     color: ${({ theme }) => theme.colors.gray};
 `;
 
-const PageDescription = ({ children, className }) => {
+interface Props {
+    children: JSX.Element | JSX.Element[] | string | null;
+    className?: string;
+}
+
+const PageDescription: React.FC<Props> = ({ children, className }) => {
     return (
         <StyledPageDescription className={className}>
             {children}

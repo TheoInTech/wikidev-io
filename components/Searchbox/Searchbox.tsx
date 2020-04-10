@@ -38,12 +38,12 @@ const SearchButton = styled.button`
     }
 `;
 
-const Searchbox = () => {
+const Searchbox: React.FC = () => {
     return (
-        <SearchForm onSubmit={e => alert(e)}>
+        <SearchForm onSubmit={(e) => alert(e)}>
             <SearchInput
                 name="search"
-                placeholder="How to do flexbox in CSS?"
+                placeholder="How to use flexbox in CSS?"
             />
             <SearchButton type="submit">
                 <Svg icon="search" />

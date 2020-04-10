@@ -1,5 +1,5 @@
 import React from "react";
-import Highlight, { defaultProps } from "prism-react-renderer";
+import Highlight, { defaultProps, Language } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/nightOwlLight";
 import styled from "styled-components";
 
@@ -31,7 +31,12 @@ const LineNo = styled.span`
     opacity: 0.3;
 `;
 
-const CodeBlock = ({ children, language }) => {
+interface Props {
+    children: string | null;
+    language: Language;
+}
+
+const CodeBlock: React.FC<Props> = ({ children, language }) => {
     return (
         <Highlight
             {...defaultProps}

@@ -9,7 +9,12 @@ const StyledWrapper = styled.div`
     margin: 24px auto;
 `;
 
-const Wrapper = ({ children, className }) => {
+interface Props {
+    children: JSX.Element | JSX.Element[] | string | null;
+    className?: string;
+}
+
+const Wrapper: React.FC<Props> = ({ children, className }) => {
     return <StyledWrapper className={className}>{children}</StyledWrapper>;
 };
 

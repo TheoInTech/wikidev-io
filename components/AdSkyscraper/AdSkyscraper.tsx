@@ -12,7 +12,7 @@ const StyledAdSkyscraper = styled.div`
     margin-bottom: 24px;
 `;
 
-const AdSkyscraper = () => {
+const AdSkyscraper: React.FC = () => {
     return <StyledAdSkyscraper>Ad Skyscraper</StyledAdSkyscraper>;
 };
 

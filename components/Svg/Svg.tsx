@@ -14,7 +14,11 @@ const StyledSvg = styled(SVG)`
     }
 `;
 
-const Svg = ({ icon }) => {
+interface Props {
+    icon: string;
+}
+
+const Svg: React.FC<Props> = ({ icon }) => {
     if (icon && icon !== "") return <StyledSvg src={icons[icon]} />;
     return null;
 };

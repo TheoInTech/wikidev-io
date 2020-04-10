@@ -11,7 +11,7 @@ const StyledAdBanner = styled.div`
     margin: auto;
 `;
 
-const AdBanner = () => {
+const AdBanner: React.FC = () => {
     return <StyledAdBanner>Ad Banner</StyledAdBanner>;
 };
 

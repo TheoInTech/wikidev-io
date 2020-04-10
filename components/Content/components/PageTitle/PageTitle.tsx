@@ -8,7 +8,12 @@ const StyledPageTitle = styled.h1`
     margin-bottom: 2rem;
 `;
 
-const PageTitle = ({ children, className }) => {
+interface Props {
+    children: JSX.Element | JSX.Element[] | string | null;
+    className?: string;
+}
+
+const PageTitle: React.FC<Props> = ({ children, className }) => {
     return <StyledPageTitle className={className}>{children}</StyledPageTitle>;
 };
 

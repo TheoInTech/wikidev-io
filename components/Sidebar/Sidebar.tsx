@@ -10,7 +10,11 @@ const StyledSidebar = styled.aside`
     overflow: auto;
 `;
 
-const Sidebar = ({ children }) => {
+interface Props {
+    children: JSX.Element | JSX.Element[] | string | null;
+}
+
+const Sidebar: React.FC<Props> = ({ children }) => {
     return <StyledSidebar>{children}</StyledSidebar>;
 };
 

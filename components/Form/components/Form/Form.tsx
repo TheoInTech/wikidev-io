@@ -9,7 +9,14 @@ const StyledForm = styled.form`
     }
 `;
 
-const Form = ({ children, onSubmit, id, className }) => {
+interface Props {
+    children: JSX.Element | JSX.Element[] | string | null;
+    className?: string;
+    onSubmit?: () => object | boolean | null;
+    id: number;
+}
+
+const Form: React.FC<Props> = ({ children, onSubmit, id, className }) => {
     return (
         <StyledForm onSubmit={onSubmit} id={id} className={className}>
             {children}

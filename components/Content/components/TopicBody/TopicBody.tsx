@@ -7,7 +7,12 @@ const StyledTopicBody = styled.div`
     color: black;
 `;
 
-const TopicBody = ({ children, className }) => {
+interface Props {
+    children: JSX.Element | JSX.Element[] | string | null;
+    className?: string;
+}
+
+const TopicBody: React.FC<Props> = ({ children, className }) => {
     return <StyledTopicBody className={className}>{children}</StyledTopicBody>;
 };
 

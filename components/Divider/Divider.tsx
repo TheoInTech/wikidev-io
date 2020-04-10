@@ -7,7 +7,7 @@ const StyledDivider = styled.hr`
     margin: 40px auto;
 `;
 
-const Divider = () => {
+const Divider: React.FC = () => {
     return <StyledDivider />;
 };
 

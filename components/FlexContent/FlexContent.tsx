@@ -7,7 +7,12 @@ const StyledContent = styled.section`
     flex-flow: row wrap;
 `;
 
-const FlexContent = ({ children, className }) => {
+interface Props {
+    children: JSX.Element | JSX.Element[] | string | null;
+    className?: string;
+}
+
+const FlexContent: React.FC<Props> = ({ children, className }) => {
     return (
         <Content>
             <StyledContent className={className}>{children}</StyledContent>

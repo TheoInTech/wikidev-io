@@ -21,7 +21,17 @@ const StyledInput = styled.input`
     }
 `;
 
-const Input = ({ id, name, placeholder, className }, props) => {
+interface Props {
+    className?: string;
+    id: number | string;
+    name: string;
+    placeholder: string;
+}
+
+const Input: React.FC<Props> = (
+    { id, name, placeholder, className },
+    props
+) => {
     return (
         <StyledInput
             id={id}

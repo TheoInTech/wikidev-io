@@ -19,7 +19,7 @@ const StyledCategoryCard = styled.div`
     padding: 40px;
 
     &:hover {
-        background: #ffffffbb;
+        background: ${({ theme }) => theme.colors.offwhite};
         box-shadow: 0 3px 5px 0 #00000011;
     }
 
@@ -33,7 +33,14 @@ const StyledCategoryCard = styled.div`
     }
 `;
 
-const CategoryCard = ({ link, target, title, icon }) => {
+interface Props {
+    link: string;
+    target?: string;
+    title: string;
+    icon: string;
+}
+
+const CategoryCard: React.FC<Props> = ({ link, target, title, icon }) => {
     return (
         <Link href={link}>
             <CategoryLink>

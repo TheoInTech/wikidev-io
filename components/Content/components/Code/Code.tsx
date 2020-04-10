@@ -10,7 +10,11 @@ const StyledCode = styled.code`
     font-weight: 600;
 `;
 
-const Code = ({ children }) => {
+interface Props {
+    children: JSX.Element | JSX.Element[] | string | null;
+}
+
+const Code: React.FC<Props> = ({ children }) => {
     return <StyledCode>{children}</StyledCode>;
 };
 

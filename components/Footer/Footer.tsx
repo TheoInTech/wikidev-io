@@ -28,7 +28,7 @@ const Appeal = styled.section`
 
 const FooterInner = styled.section`
     flex: 1;
-    background: #0c240a;
+    background: #313131;
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
@@ -65,7 +65,7 @@ const FooterInnerBox = styled.div`
     }
 `;
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <StyledFooter>
             <Appeal>

@@ -14,7 +14,12 @@ const StyledContent = styled.section`
     overflow: auto;
 `;
 
-const Content = ({ children, className }) => {
+interface Props {
+    children: JSX.Element | JSX.Element[] | string | null;
+    className?: string;
+}
+
+const Content: React.FC<Props> = ({ children, className }) => {
     return <StyledContent className={className}>{children}</StyledContent>;
 };
 

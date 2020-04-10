@@ -8,7 +8,12 @@ const StyledTopicTitle = styled.h2`
     margin-bottom: 1.5rem;
 `;
 
-const TopicTitle = ({ children, className }) => {
+interface Props {
+    children: JSX.Element | JSX.Element[] | string | null;
+    className?: string;
+}
+
+const TopicTitle: React.FC<Props> = ({ children, className }) => {
     return (
         <StyledTopicTitle className={className}>{children}</StyledTopicTitle>
     );
